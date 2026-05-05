@@ -2,7 +2,6 @@ package conditionalStaement.org;
 
 public class IfStatement {
 	
-	
 	//example = 1
 	public void ifCondition() {
 		
@@ -16,7 +15,6 @@ public class IfStatement {
 			System.out.println("you cannot go, because you have to pay 100");
 		}
 	}
-	
 	//example = 2
 	public void example() {
 		
@@ -55,19 +53,143 @@ public class IfStatement {
 			System.out.println("Invalid mark , please enter between 1 to 100");
 		}
 	
+	}
+	public void percentage() {
 		
+		int tamil   = 80;
+		int english = 93;
+		int maths   = 76;
+		int science = 47;
+		int ss      = 64;
 		
+		int totalMarks = (tamil + english + maths + science + ss);
+	
+		//find a percentage of five subjects.
+		double percent = ((totalMarks/500.0)* 100);	
+			System.out.println("percent of five subject is : " + percent);
+	
+		//grade: (H S A B C  E) 	(1 to 100)
 		
+		if(percent >= 1 && percent <= 100) {
+			
+			System.out.println("your percentage is : " + percent);
+			
+			if(percent >= 91) {
+				System.out.println("grade : H");
+			}
+			else if(percent >= 81 && percent <= 90) {
+				System.out.println("grade : S");
+			}
+			else if(percent >= 71 && percent <= 80) {
+				System.out.println("grade : A");
+			}
+			else if(percent >= 61 && percent <= 70) {
+				System.out.println("grade : B");
+			}
+			else if(percent >= 51 && percent <= 60) {
+				System.out.println("grade : C");
+			}
+			else if(percent >= 35 && percent <= 50) {
+				System.out.println("grade : D");
+			}
+			else if(percent <= 34) {
+				
+				System.out.println("grade : E");
+			}
+		}
+		else {
+			System.out.println("you enter invalid input percent .....");
+		}	
 	}
 	
+	public void scholarshipLadderIf() {
+		
+	//scholarship eligible or not
+	// 1. avg >= 85 			 -> 100% scholarship
+	// 2. avg >= 70 && avg <= 84 -> 50%  scholarship	
+	// 3. avg < 70               -> 0%   scholarship	
+	
+		int tamil   = 80;
+		int english = 93;
+		int maths   = 76;
+		int science = 47;
+		int ss      = 64;
+		
+		int avg = (tamil + english + maths + science + ss)/5;
+	    
+//	    int avg = 101;
+	    
+	    if(avg >= 85 && avg <= 100){
+	        System.out.println("100% scholarship ");
+	    }
+	    else if(avg >= 70 && avg <= 84){
+	        System.out.println("50% scholarship ");
+	    }
+	    else if(avg <= 69 && avg >=1){
+	        System.out.println("0% scholarship ");
+	    }
+	    else{
+	        System.out.println("enter value between (1 to 100)");
+	    }
+	}
+	public void scholarshipNestedIf() {
+		
+		
+		int tamil   = 80;
+		int english = 93;
+		int maths   = 76;
+		int science = 47;
+		int ss      = 64;
+		
+		int avg = (tamil + english + maths + science + ss)/5;
+	    
+//	    int avg = 101;
+	    
+		
+		
+		if(avg >= 70 && avg <= 100){
+		    
+	        if(avg >= 85){
+	            System.out.println("100% scholarship");
+	        }
+	        else if(avg >= 70 && avg <= 84){
+	            System.out.println("50% scholarship");
+	        }
+	    }
+	    else{
+	        System.out.println("0% scholarship");
+	    }
+	}
 	
 	public static void main(String[] args) {
 		
 		IfStatement object = new IfStatement();
 		object.ifCondition();
 		object.example();		
-		
-		
+		object.percentage();
+		object.scholarshipLadderIf();	
+		object.scholarshipNestedIf();
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
