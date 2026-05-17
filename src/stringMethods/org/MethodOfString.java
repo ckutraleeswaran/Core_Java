@@ -12,7 +12,7 @@ public class MethodOfString {
 		
 			System.out.println(dept.toLowerCase());
 	}
-	public void length() {	///working from 1 
+	public void length() {	///starts from 1 
 		String name = "kutraleeswaran";
 			System.out.println(name.length());
 	}
@@ -84,7 +84,7 @@ public class MethodOfString {
 		
 		MethodOfString object = new MethodOfString();
 		
-			object.equalIgnore();
+			object.length();
 			
 	}
 	
