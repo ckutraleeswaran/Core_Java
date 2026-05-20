@@ -5,7 +5,7 @@ public class Arrays {
 //	Array
 //	---------
 //	1. single dimensional  array
-//	2. multi dimensional array
+//	2. multi or 2dimensional array
 //
 //	Single dimensional array:
 //	--------------------------
@@ -78,24 +78,117 @@ public class Arrays {
 		}
 		
 	}
-	public static void main(String[] args) {
-		Arrays object = new Arrays();
+	public void declar() {
 		
-		object.singleArray();
-		object.single();
-		object.stringValue();
-		object.str();
+		int[] numbers;
+		
+		numbers = new int[4];
+		
+		// Assign values
+		numbers[0] = 90;
+		numbers[1] = 80;
+		numbers[2] = 70;
+		numbers[3] = 60;
+		
+		// Print values
+        	System.out.println(numbers[0]);
+        	System.out.println(numbers[1]);
+        	System.out.println(numbers[2]);
+        	System.out.println(numbers[3]);
+        
+        //print values by using loops
+        for(int i = 0 ; i < numbers.length ; i++) {
+        	
+        	System.out.println("by using for loop : " + numbers[i]);
+        }
+		
+	}
+	public void multiArray() {
+		
+		int [][] numbers;
+		
+		numbers = new int [3][3];
+		
+		numbers[0][0] = 50;
+		numbers[0][1] = 60;
+		numbers[0][2] = 70;
+		
+		numbers[1][0] = 50;
+		numbers[1][1] = 60;
+		numbers[1][2] = 70;
+		
+		numbers[2][0] = 50;
+		numbers[2][1] = 60;
+		numbers[2][2] = 70;
+//			System.out.print("numbers[0][0] : " + numbers[0][0]);
+//			System.out.print("numbers[0][1] : " + numbers[0][1]);
+//			System.out.println("numbers[0][2] : " + numbers[0][2]);
+//			
+//			System.out.print("numbers[1][0] : " + numbers[1][0]);
+//			System.out.print("numbers[1][1] : " + numbers[1][1]);
+//			System.out.println("numbers[1][2] : " + numbers[1][2]);
+//			
+//			System.out.print("numbers[2][0] : " + numbers[2][0]);
+//			System.out.print("numbers[2][1] : " + numbers[2][1]);
+//			System.out.println("numbers[2][2] : " + numbers[2][2]);
+		
+		System.out.print(numbers[0][0] + " " );
+		System.out.print(numbers[0][1] + " ");
+		System.out.println(numbers[0][2]);
+		
+		System.out.print(numbers[1][0] + " ");
+		System.out.print(numbers[1][1] + " ");
+		System.out.println(numbers[1][2]);
+		
+		System.out.print(numbers[2][0] + " ");
+		System.out.print(numbers[2][1] + " ");
+		System.out.println(numbers[2][2]);
+	}
+	public void multiArrayLoop() {
+		
+		int [][] numbers;
+		
+		numbers = new int [3][3];
+		
+		numbers[0][0] = 50;
+		numbers[0][1] = 60;
+		numbers[0][2] = 70;
+		
+		numbers[1][0] = 50;
+		numbers[1][1] = 60;
+		numbers[1][2] = 70;
+		
+		numbers[2][0] = 50;
+		numbers[2][1] = 60;
+		numbers[2][2] = 70;
+
+		//row
+        for(int i = 0; i < numbers.length; i++) {
+        	//column
+            for(int j = 0; j < numbers[i].length; j++) {
+
+                System.out.print(numbers[i][j] + " ");
+            }
+
+            System.out.println();
+        }
+		
+
+	}
+	public static void main(String[] args) {
+	
+		Arrays object = new Arrays();
+		//single dimensional array
+//		object.singleArray();
+//		object.single();
+//		object.stringValue();
+//		object.str();
+//		object.declar();
+//		object.multiArray();
+		object.multiArrayLoop();
 	}
 
 }
-
-
-
-
-
-
-
-
 
 
 
