@@ -169,11 +169,8 @@ public class Arrays {
 
                 System.out.print(numbers[i][j] + " ");
             }
-
             System.out.println();
         }
-		
-
 	}
 	public static void main(String[] args) {
 	
