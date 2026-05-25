@@ -67,34 +67,14 @@ public class ScannerClassJava {
 		System.out.println("Youre name is  : " + name);
 		System.out.println("Youre job role is : " + jobName);
 	}
-	public void math() {
-		
-		
-		Scanner sc = new Scanner(System.in);
-		
-		// need two int value from user
-		
-		System.out.println("enter 'a' value : ");
-		int a = sc.nextInt();
-		
-		System.out.println("enter 'b' value : ");
-		int b = sc.nextInt();
-		
-		
-		//
-		System.out.println("addition of (a + b) :  " + ( a + b));
-		
-		
-		
-	}
 
 	public static void main(String[] args) {
 	
 		ScannerClassJava obj = new ScannerClassJava();
 		
-//		obj.data();
-//		obj.stringMethod();
-		obj.math();
+		obj.data();
+		obj.stringMethod();
+	
 	}
 
 }
